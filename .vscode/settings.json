@@ -1,0 +1,9 @@
+{
+    "openapi.approvedHostnames": [
+        "http://127.0.0.1"
+    ],
+    "openapi.docker": {
+        "replaceLocalhost": true,
+        "useHostNetwork": true
+    }
+}
