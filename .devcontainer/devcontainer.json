@@ -1,0 +1,25 @@
+{
+    "name": "My Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:14",
+    "extensions": [
+        "ms-azuretools.vscode-azurecli",
+        "ms-dotnettools.csharp",
+        "ms-python.python"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+      "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot"
+            ]
+        },
+        "codespaces": {
+            "openFiles": [
+                "codespace.md"
+            ]
+        }
+    },
+    "forwardPorts": [80, 443]
+}
