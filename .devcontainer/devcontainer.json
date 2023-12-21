@@ -1,7 +1,20 @@
 {
     "name": "My Dev Container",
     "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:14",
+        "features": {
+        "ghcr.io/devcontainers/features/docker-from-docker:1": {},
+        "ghcr.io/devcontainers/features/github-cli:latest": {},
+        "ghcr.io/devcontainers/features/azure-cli:latest": {},
+        "ghcr.io/devcontainers/features/python:1": {}
+    },
     "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-labs",
+        "GitHub.copilot-chat",
+        "ms-dotnettools.csharp",
+        "ms-vscode.PowerShell",
+        "ms-vscode.vscode-node-azure-pack",
+        "VisualStudioExptTeam.vscodeintellicode",
         "ms-azuretools.vscode-azurecli",
         "ms-dotnettools.csharp",
         "ms-python.python"
