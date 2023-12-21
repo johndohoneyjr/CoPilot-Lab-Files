@@ -1,5 +1,8 @@
 # CoPilot-Lab-Files
 
+Pre-requisites
+Simple SQL Lite Database (MAC and Windows)  https://dbeaver.io/download/
+
 MTC Session on Jan 16
 CoPilot Meeting Jan 17
 
