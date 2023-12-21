@@ -12,10 +12,8 @@
         "GitHub.copilot-labs",
         "GitHub.copilot-chat",
         "ms-dotnettools.csharp",
-        "ms-vscode.PowerShell",
         "ms-vscode.vscode-node-azure-pack",
         "VisualStudioExptTeam.vscodeintellicode",
-        "ms-azuretools.vscode-azurecli",
         "ms-dotnettools.csharp",
         "ms-python.python"
     ],
