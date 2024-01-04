@@ -1,7 +1,8 @@
 import sqlite3
 
 # Connect to the SQLite database
-conn = sqlite3.connect('/workspaces/CoPilot-Lab-Files/db/Chinook.db')
+#conn = sqlite3.connect('/workspaces/CoPilot-Lab-Files/db/Chinook.db')
+conn = sqlite3.connect('C:\\Users\\johndohoney\\CoPilot-Lab-Files\\db\\Chinook.db')
 
 # Create a cursor object
 c = conn.cursor()
