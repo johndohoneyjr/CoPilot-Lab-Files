@@ -18,3 +18,9 @@
   7h. Jasmine Installed
 
 Note: These tools will work on Windows, Linux variants, and Mac OSX.
+
+## Logistics
+We will require building access or provisions for and Escort.
+Jan 16, we expect to arrive at 2pm CST
+Jan 17-18, we expect to arrive 6:30 am CST
+Departure on Jan 18 will be around 3:30-4PM depending on traffic back to DFW (Alaska Air Terminal)
