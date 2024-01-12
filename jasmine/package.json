@@ -1,0 +1,20 @@
+{
+  "name": "jasmine-test",
+  "version": "1.0.0",
+  "description": "Testing Math functions",
+  "main": "fib.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "John Dohoney",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "jasmine-node": "^3.0.0",
+    "jasmine-test": "file:",
+    "mocha": "^10.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^5.0.1"
+  }
+}
