@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+set -x
+
 # Environment Variables
 export SUBSCRIPTION_ID=""
 export RESOURCE_GROUP="optimal-blue-rg"
 export LOCATION="eastus"
-export SERVICE_PRINCIPAL_NAME="serviceprincipal"
+export SERVICE_PRINCIPAL_NAME="labserviceprincipal"
 export GITHUB_REPO="https://github.com/johndohoneyjr/CoPilot-Lab-Files"
 
 # for alias in WSL - alias expansion needed in scripts, not interactive
@@ -30,6 +32,7 @@ if [[ -z "${WSL_DISTRO_NAME}" ]]; then
   echo "Not running in WSL, skipping WSL specific commands"
 else 
   alias gh="gh.exe"
+  alias jq='jq.exe'
 fi
 
 
@@ -102,6 +105,14 @@ export PASSWORD=$(cat gh-secret.json | jq -r .clientSecret)
 export TENANT_ID=$(cat gh-secret.json | jq -r .tenantId)
 export SUB_ID=$(cat gh-secret.json | jq -r .subscriptionId)
 
+cat gh-secret.json
+
+exit
+
+# Add role to Service Principal: 'Microsoft.Resources/subscriptions/read' over scope '/subscriptions/8543b929-5442-4ead-a32d-16c8783c9db6'
+echo "Adding role to Service Principal: 'Microsoft.Resources/subscriptions/read' over scope '/subscriptions/$SUBSCRIPTION_ID'"
+az role assignment create --assignee $clientID --role "Microsoft.Resources/subscriptions/read" --scope /subscriptions/$SUBSCRIPTION_ID
+
 
 echo "az login --service-principal --username $clientID --password $PASSWORD --tenant $TENANT_ID" > $Student-login.txt
 
@@ -112,7 +123,7 @@ gh auth login
 
 #
 echo "Setting the Service Principal Github Secret for automation..."
-gh secret set $STUDENT"_CLUSTER_SERVICE_PRINCIPAL" -a codespaces -r $GITHUB_REPO < gh-secret.json
+gh secret set $Student"_CLUSTER_SERVICE_PRINCIPAL" -a codespaces -r $GITHUB_REPO < gh-secret.json
 
 if [ $? -eq 0 ]; then
    echo "Displaying the secret file...gh-secret.json, after you add ClientID and Secret, delete file..."
@@ -123,13 +134,13 @@ else
 fi
 
 echo "Setting Subscription ID Github Secret for Github Actions automation..."
-gh secret set  $STUDENT"_SUBSCRIPTION_ID" -a codespaces -r $GITHUB_REPO --body $SUBSCRIPTION_ID
+gh secret set  $Student"_SUBSCRIPTION_ID" -a codespaces -r $GITHUB_REPO --body $SUBSCRIPTION_ID
 
 echo "Setting Resource Group Name as Github Secret for Github Actions automation..."
-gh secret set  $STUDENT"_RESOURCE_GROUP"  -a codespaces -r $GITHUB_REPO --body $RESOURCE_GROUP
+gh secret set  $Student"_RESOURCE_GROUP"  -a codespaces -r $GITHUB_REPO --body $RESOURCE_GROUP
 
 echo "Setting the Login for client access for client  automation..."
-gh secret set $STUDENT"_CLIENT_LOGIN" -a codespaces -r $GITHUB_REPO < $Student-login.txt
+gh secret set $Student"_CLIENT_LOGIN" -a codespaces -r $GITHUB_REPO < $Student-login.txt
 
 # Clean up
 rm $Student-login.txt
