@@ -123,3 +123,10 @@ dist
 */obj/*
 */bin/*
 */Debug/*
+*.deps.json
+*.runtimecongif.json
+*/net8.0/*
+*.dgspec.json
+*.props
+*.targets
+.pyc
