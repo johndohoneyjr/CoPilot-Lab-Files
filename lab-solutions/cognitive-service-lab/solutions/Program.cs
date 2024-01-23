@@ -10,7 +10,7 @@ class Program
     {
         // Create a TextAnalytics client
         string textAnalyticsKey = "";
-        string textAnalyticsEndpoint = "https://cognitive-lab-amd.cognitiveservices.azure.com/";
+        string textAnalyticsEndpoint = "";
         var textAnalyticsClient = new TextAnalyticsClient(new Uri(textAnalyticsEndpoint), new AzureKeyCredential(textAnalyticsKey));
 
         List<string> questions = new List<string>()
