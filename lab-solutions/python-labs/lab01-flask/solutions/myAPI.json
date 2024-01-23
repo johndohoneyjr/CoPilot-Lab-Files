@@ -1,0 +1,143 @@
+{
+    "components": {
+        "schemas": {
+            "AddTwoNumbersOut": {
+                "properties": {
+                    "sum": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SayHelloOut": {
+                "properties": {
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "ValidationError": {
+                "properties": {
+                    "detail": {
+                        "properties": {
+                            "<location>": {
+                                "properties": {
+                                    "<field_name>": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "info": {
+        "title": "APIFlask",
+        "version": "0.1.0"
+    },
+    "openapi": "3.0.3",
+    "paths": {
+        "/AddTwoNumbers": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "num1",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "num2",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddTwoNumbersOut"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "422": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                }
+                            }
+                        },
+                        "description": "Validation error"
+                    }
+                },
+                "summary": "Add"
+            }
+        },
+        "/SayHello": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "maxLength": 10,
+                            "minLength": 0,
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SayHelloOut"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "422": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidationError"
+                                }
+                            }
+                        },
+                        "description": "Validation error"
+                    }
+                },
+                "summary": "Say Hello"
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:5000/"
+        }
+    ],
+    "tags": []
+}
