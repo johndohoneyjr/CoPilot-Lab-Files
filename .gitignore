@@ -2,13 +2,9 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
 
 # Compiled Object files
 *.slo
@@ -39,7 +35,6 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 *.exe
 *.out
 *.app
-
 
 # Runtime data
 pids
@@ -82,9 +77,6 @@ typings/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
-
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -97,9 +89,6 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
-.yarn-integrity
-
 # dotenv environment variables file
 .env
 .env.test
@@ -107,26 +96,15 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
 *.d
-*.cache
-*.CopyComplete
-*.pdb
 obj/
 bin/
 Debug/
+net8.0/
 *.deps.json
 *.runtimecongif.json
 *.dgspec.json
 *.props
 *.targets
-*.pyc
-net8.0/
+package-lock.json
+package.json
