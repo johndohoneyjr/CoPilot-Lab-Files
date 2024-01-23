@@ -1,0 +1,12 @@
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.AssemblyInfoInputs.cache
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.AssemblyInfo.cs
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.csproj.CoreCompileInputs.cache
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.sourcelink.json
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\bin\Debug\net8.0\NumberService.deps.json
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\bin\Debug\net8.0\NumberService.dll
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\bin\Debug\net8.0\NumberService.pdb
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.dll
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\refint\NumberService.dll
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\NumberService.pdb
+C:\Users\adeany\Documents\repos\CoPilot-Lab-Files\xunit\solutions\NumberService\obj\Debug\net8.0\ref\NumberService.dll
