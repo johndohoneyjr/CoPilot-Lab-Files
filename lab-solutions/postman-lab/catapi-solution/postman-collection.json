@@ -1,0 +1,56 @@
+{
+    "info": {
+        "name": "TheCatAPI Collection",
+        "description": "A collection for testing thecatapi.com",
+        "_postman_id": "a unique id",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "List Breeds",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "x-api-key",
+                        "value": "YOUR_API_KEY"
+                    }
+                ],
+                "url": {
+                    "raw": "https://api.thecatapi.com/v1/breeds",
+                    "protocol": "https",
+                    "host": [
+                        "api",
+                        "thecatapi",
+                        "com"
+                    ],
+                    "path": [
+                        "v1",
+                        "breeds"
+                    ]
+                }
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "a unique id",
+                        "exec": [
+                            "pm.test('Status code is 200', function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});",
+                            "pm.test('Response time is less than 500ms', function () {",
+                            "    pm.expect(pm.response.responseTime).to.be.below(500);",
+                            "});",
+                            "pm.test('Content-Type is present', function () {",
+                            "    pm.response.to.have.header('Content-Type');",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "response": []
+        }
+    ]
+}
