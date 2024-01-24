@@ -1,5 +1,0 @@
-Question: Rate your job satisfaction on a scale of 1 to 10. - Rating: 5 - Sentiment: Positive
-Question: Rate your work-life balance on a scale of 1 to 10. - Rating: 5 - Sentiment: Neutral
-Question: Rate your relationship with your manager on a scale of 1 to 10. - Rating: 5 - Sentiment: Neutral
-Question: Rate your satisfaction with your salary on a scale of 1 to 10. - Rating: 5 - Sentiment: Positive
-Question: Rate your overall satisfaction with your work environment on a scale of 1 to 10. - Rating: 5 - Sentiment: Positive
